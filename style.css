@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background-image: url(image/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;    
+    /*border: 8px solid black;*/
+}
+
+.Top-container {
+    position: absolute;
+    justify-content: center;
+    right: 35%;
+    top: 2%;
+
+}
+
+.Text {
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    border-right: 10px solid;
+    color: lightgray;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing-Text 2s steps(23),cursor-Text .4s
+    step-end infinite alternate;
+}
+
+@keyframes cursor-Text {
+    50% {border-color: transparent;}
+}
+
+@keyframes typing-Text {
+    from {width: 0;}
+}
+
+.Mid-container {
+    position: absolute;
+    justify-content: center;
+    right: 20%;
+    top: 15%;
+}
+
+.Text-2 {
+    font-size: 2em;
+    text-decoration: underline;
+    letter-spacing: 3px;
+    font-family: 'Poppins', sans-serif;
+    border-right: 5px solid;
+    color: lightgray;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing-Text-2 2.6s steps(48),cursor-Text-2 .4s 
+    step-end infinite alternate;
+}
+
+@keyframes cursor-Text-2 {
+    50% {border-color: transparent;}
+}
+
+@keyframes typing-Text-2 {
+    from {width: 0;}
+}
+
+.no-cursor {
+    border-right: none;
+}
+
+.Mid-container-2 {
+    position: relative;
+    text-align: center;
+}
+
+.Text-3 {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: lightgray;
+    margin-top: 200px;
+    font-family: fantasy;
+}
+
+.bot-container {
+    position: relative;
+    text-align: center;
+}
+
+.Text-4  {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: lightgray;
+    margin-top: 100px;
+    font-family: fantasy;
+}
+
+.link {
+    min-height: 15vh;
+}
+
+.link a{
+    position: relative;
+    display: inline-block;
+    color: black;
+    font-size: 2.5em;
+    letter-spacing: 1.6px;
+    text-decoration: none;
+    left: 35%;   
+    font-family: fantasy;
+    transition: .5s;
+}
+
+a:hover {
+    color: var(--clr);
+    letter-spacing: 4px;
+    text-decoration: underline;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     margin-top: -50px;
+}
+
+.Mid-container-2 p, .bot-container p, video, img {
+    animation: CSSscrollReveal ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 100% cover 50%;
+}
+
+@keyframes CSSscrollReveal {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .Top-container, .Mid-container {
+        position: relative; /* 改为relative更好控制 */
+        right: auto;
+        left: auto;
+        top: 100px;
+        margin: 0 auto; /* 居中对齐 */
+        text-align: center;
+    }
+
+    .Text {
+        font-size: 1.5em;
+        letter-spacing: 2px;
+    }
+
+    .Text-2{
+        font-size: 0.9em;
+        letter-spacing: 2px;
+    }
+
+    .link a{
+        font-size: 1.5em;
+        letter-spacing: 1px;
+        margin-left: -73px;
+    }
+}
+
+@media (max-width: 768px) {
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    img {
+        width: 90%;
+    }
+}
